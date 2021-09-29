@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  padding: 0em 15em;
+  background-image: url("../slike/hero.jpeg");
+  height: 100vh;
+  background-size: cover;
+}
+
+header nav {
+  background-color: white;
+}
+header nav ul {
+  list-style: none;
+  text-align: center;
+}
+header nav ul li {
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 2em;
+  padding: 0.5em;
+}
+header nav ul li img {
+  width: 1.5em;
+}
+header nav ul li:hover {
+  color: #d17364;
+}
+
+main h1 {
+  text-align: center;
+  margin-top: 15%;
+  color: white;
+}
+main p {
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+  border: 1px solid white;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  width: 15%;
+  margin-left: 40%;
+}
+main p:hover {
+  background-color: white;
+  color: #d17364;
+}
+
+.prva {
+  padding: 3em 15em;
+}
+.prva::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.prva h2 {
+  text-transform: uppercase;
+}
+.prva div {
+  width: 25%;
+  float: left;
+  padding: 1em;
+}
+.prva div h3 {
+  text-align: right;
+  margin-bottom: 1em;
+  color: #25496b;
+}
+.prva div p {
+  text-align: justify;
+}
+
+.druga {
+  padding: 3em 25em;
+  background-color: #f7faff;
+}
+.druga::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.druga div {
+  width: 33%;
+  float: left;
+  padding: 0.5em;
+}
+.druga div::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.druga h2.sekcija {
+  text-align: center;
+  border: 1px solid #1e182e;
+  background-color: #1e182e;
+  padding: 1em;
+  color: white;
+}
+.druga p {
+  text-align: center;
+  padding: 0.5em;
+  border: 1px solid #1e182e;
+}
+.druga h3 {
+  text-align: center;
+  border: 1px solid #1e182e;
+  background-color: #1e182e;
+  padding: 1em;
+  color: white;
+}
+.druga #hide {
+  display: none;
+}
+.druga #naslov {
+  padding: 1em;
+  text-align: right;
+  text-transform: uppercase;
+}
+.druga div:hover h2 {
+  background-color: #d17364;
+  border: 1px solid #d17364;
+}
+.druga div:hover h3 {
+  background-color: #d17364;
+  border: 1px solid #d17364;
+}
+.druga div:hover p {
+  border: 1px solid #d17364;
+}
+
+footer {
+  padding: 3em 15em;
+  background-color: #1e182e;
+}
+footer::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+footer .foot {
+  float: left;
+  width: 50%;
+}
+footer h2 {
+  color: #d17364;
+}
+footer p {
+  color: white;
+  text-align: justify;
+}
+footer .footR {
+  float: right;
+  margin-right: 20%;
+}
+footer .footR ul {
+  list-style-image: url(../slike/bullet.png);
+}
+footer .footR ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+@media screen and (max-width: 1250px) {
+  .druga {
+    padding: 3em 15em;
+  }
+  .druga div {
+    width: 50%;
+  }
+  .druga div:last-child {
+    margin-left: 11em;
+  }
+  .druga div h3 {
+    display: none;
+  }
+  .druga div #hide {
+    display: block;
+  }
+
+  .prva {
+    padding: 3em 5em;
+  }
+  .prva div {
+    width: 100%;
+  }
+  .prva div h3 {
+    text-align: left;
+  }
+  .prva div p {
+    width: 80%;
+    float: left;
+    text-align: right;
+  }
+  .prva div img {
+    float: right;
+    width: 10em;
+  }
+
+  footer {
+    padding: 3em 5em;
+  }
+  footer .footR {
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 660px) {
+  main {
+    padding: 0;
+    height: 40vh;
+    background-image: none;
+  }
+  main h1,
+main p {
+    display: none;
+  }
+
+  header nav ul #lista {
+    display: block;
+    border-bottom: 1px solid black;
+  }
+  header nav ul #slika {
+    display: none;
+  }
+
+  .prva {
+    padding: 0.5em;
+  }
+  .prva h2 {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .prva div h3 {
+    text-align: center;
+  }
+  .prva div p {
+    width: 100%;
+    text-align: left;
+  }
+  .prva div img {
+    display: none;
+  }
+
+  .druga {
+    padding: 0;
+  }
+  .druga div {
+    width: 100%;
+    padding: 1em 4em;
+  }
+  .druga div:last-child {
+    margin: 0;
+  }
+  .druga div h3 {
+    display: none;
+  }
+  .druga div #hide {
+    display: block;
+  }
+
+  footer {
+    padding: 3em 3em;
+  }
+  footer .floater {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .foot {
+    width: 100%;
+    order: 2;
+  }
+  footer .foot h2 {
+    margin-bottom: 1em;
+  }
+  footer .footR {
+    width: 100%;
+    margin: 0;
+    float: none;
+  }
+  footer .footR h2 {
+    margin-bottom: 0.5em;
+  }
+  footer .footR ul {
+    list-style-image: url(../slike/bullet.png);
+  }
+  footer .footR ul li {
+    display: inline-block;
+    padding-right: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+/*# sourceMappingURL=still.css.map */

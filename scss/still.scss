@@ -1,0 +1,293 @@
+@import "vars";
+@import "mixins";
+
+@include global();
+
+main {
+  padding: 0em 15em;
+  background-image: url("../slike/hero.jpeg");
+  height: 100vh;
+  background-size: cover;
+}
+
+header {
+  nav {
+    background-color: white;
+
+    ul {
+      list-style: none;
+      text-align: center;
+
+      li {
+        text-decoration: none;
+        display: inline-block;
+        padding-left: 2em;
+        padding: 0.5em;
+
+        img {
+          width: 1.5em;
+        }
+      }
+      li:hover {
+        color: $crvena;
+      }
+    }
+  }
+}
+main {
+  h1 {
+    text-align: center;
+    margin-top: 15%;
+    color: white;
+  }
+  p {
+    text-align: center;
+    // display: block;
+    color: white;
+    margin-top: 20px;
+    border: 1px solid white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    width: 15%;
+    margin-left: 40%;
+  }
+  p:hover {
+    background-color: white;
+    color: $crvena;
+  }
+}
+.prva {
+  padding: 3em 15em;
+  @include clearfix;
+  h2 {
+    text-transform: uppercase;
+  }
+  div {
+    width: 25%;
+    float: left;
+    padding: 1em;
+
+    h3 {
+      text-align: right;
+      margin-bottom: 1em;
+      color: $plava;
+    }
+    p {
+      text-align: justify;
+    }
+  }
+}
+.druga {
+  padding: 3em 25em;
+  background-color: $siva;
+  @include clearfix;
+  div {
+    width: 33%;
+    float: left;
+    @include clearfix;
+    padding: 0.5em;
+  }
+  h2.sekcija {
+    text-align: center;
+    // margin-bottom: 1em;
+    border: 1px solid $tamnoplava;
+    background-color: $tamnoplava;
+    padding: 1em;
+    color: white;
+  }
+  p {
+    text-align: center;
+    padding: 0.5em;
+    border: 1px solid $tamnoplava;
+  }
+  h3 {
+    text-align: center;
+    border: 1px solid $tamnoplava;
+    background-color: $tamnoplava;
+    padding: 1em;
+    color: white;
+  }
+  #hide {
+    display: none;
+  }
+  #naslov {
+    padding: 1em;
+    text-align: right;
+    text-transform: uppercase;
+  }
+  div:hover {
+    h2 {
+      background-color: $crvena;
+      border: 1px solid $crvena;
+    }
+    h3 {
+      background-color: $crvena;
+      border: 1px solid $crvena;
+    }
+    p {
+      border: 1px solid $crvena;
+    }
+  }
+}
+footer {
+  @include clearfix;
+  .foot {
+    float: left;
+    width: 50%;
+  }
+  padding: 3em 15em;
+  background-color: $tamnoplava;
+  h2 {
+    color: $crvena;
+  }
+  p {
+    color: white;
+    text-align: justify;
+  }
+  .footR {
+    float: right;
+    margin-right: 20%;
+    ul {
+      list-style-image: url(../slike/bullet.png);
+      li {
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .druga {
+    padding: 3em 15em;
+    div {
+      width: 50%;
+      &:last-child {
+        margin-left: 11em;
+      }
+      h3 {
+        display: none;
+      }
+      #hide {
+        display: block;
+      }
+    }
+  }
+  .prva {
+    padding: 3em 5em;
+    div {
+      width: 100%;
+
+      h3 {
+        text-align: left;
+      }
+      p {
+        width: 80%;
+        float: left;
+        text-align: right;
+      }
+      img {
+        float: right;
+        width: 10em;
+      }
+    }
+  }
+  footer {
+    padding: 3em 5em;
+    .footR {
+      margin-right: 10px;
+    }
+  }
+}
+@media screen and (max-width: 660px) {
+  main {
+    padding: 0;
+    height: 40vh;
+    background-image: none;
+    h1,
+    p {
+      display: none;
+    }
+  }
+  header {
+    nav {
+      ul {
+        #lista {
+          display: block;
+          border-bottom: 1px solid black;
+        }
+        #slika {
+          display: none;
+        }
+      }
+    }
+  }
+  .prva {
+    padding: 0.5em;
+    h2 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    div {
+      h3 {
+        text-align: center;
+      }
+      p {
+        width: 100%;
+        text-align: left;
+      }
+      img {
+        display: none;
+      }
+    }
+  }
+  .druga {
+    padding: 0;
+    div {
+      width: 100%;
+      padding: 1em 4em;
+      &:last-child {
+        margin: 0;
+      }
+      h3 {
+        display: none;
+      }
+      #hide {
+        display: block;
+      }
+    }
+  }
+  footer {
+    padding: 3em 3em;
+    .floater {
+      display: flex;
+      flex-direction: column;
+    }
+    .foot {
+      width: 100%;
+      order: 2;
+      h2 {
+        margin-bottom: 1em;
+      }
+    }
+    .footR {
+      width: 100%;
+      margin: 0;
+      float: none;
+      h2 {
+        margin-bottom: 0.5em;
+      }
+
+      ul {
+        list-style-image: url(../slike/bullet.png);
+        li {
+          display: inline-block;
+          padding-right: 1em;
+          margin-bottom: 1em;
+        }
+      }
+    }
+  }
+}
